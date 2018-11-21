@@ -310,7 +310,7 @@ io.on('connection', socket => {
     socket.emit('previousMessages', messages);
     socket.broadcast.emit('newUser', newUserMessage);
 
-    socket.on('onLogin', data => {
+    socket.on('tryLogin', data => {
         const directory = "CardBattle/Users/"+data.username;
         const fileName = "login.json";
         let user = readFile(directory, fileName);
@@ -327,7 +327,7 @@ io.on('connection', socket => {
         socket.emit('onLogin', message);
     })
 
-    socket.on('onRegister', data => {
+    socket.on('tryRegister', data => {
         const directory = "CardBattle/Users/"+data.username;
         const fileName = "login.json";
         let user = readFile(directory, fileName);

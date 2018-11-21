@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node server.js",
     "serve": "node server.js",
+    "webpack-build": "webpack --mode=production --color --progress --env.prod",
     "start": "node server.js"
   },
   "author": "Alex Abreu Louzada",

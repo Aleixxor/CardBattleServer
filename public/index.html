@@ -16,20 +16,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
   </head>
-  <body>
-    <h1>API Online</h1>
+  <body ng-app="game">
 
-    <p id="server-time"></p>
+    <ui-view></ui-view>
+
+    <div>
+      <h1>API Online</h1>
+      <p id="server-time"></p>
+    </div>
+    <script src="app.js"></script>
     <script>
       var socket = io();
-      var el = document.getElementById('server-time');
+      var el = document.getElementById("server-time");
       socket.on("receivedMessage", function(message) {
         message = encryptDecrypt(message);
         renderMessage("received", message);
       });
 
-      socket.on('time', function(timeString) {
-        el.innerHTML = 'Server time: ' + timeString;
+      socket.on("time", function(timeString) {
+        el.innerHTML = "Server time: " + timeString;
       });
     </script>
   </body>

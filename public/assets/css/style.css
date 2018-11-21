@@ -1,0 +1,149 @@
+.active {
+    color: red;
+    font-weight: bold;
+}
+
+.input{
+    padding: 0px;
+    height: 40px;
+    float: none !important;
+}
+
+.username{
+
+}
+
+.password{
+    margin-left: -5px
+}
+
+.buttonn{
+    min-width: 45px;
+    height: 40px;
+    background-color: #465cc0;
+    cursor: pointer;
+}
+
+.buttonn:hover{
+    background-color: #465cc0ab;
+}
+
+.buttonn:active{
+    background-color: #334597;
+}
+
+.toButton{
+    min-width: 45px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    float: none !important;
+    padding-top: 4px
+}
+
+.toLoginButton{
+    
+    background-color: #5e0f0f;
+    color: white;
+    
+}
+
+.toLoginButton:hover{
+    background-color: #8d0d0d;
+}
+
+.toLoginButton:active{
+    background-color: #410707;
+}
+
+.center{
+    display: block;
+    text-align: -webkit-center;
+}
+
+.co-1{
+    width: 8.333333333%;
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.co-2{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 16.66666667%
+}
+.co-3{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 25%
+}
+.co-4{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 33.333333333%
+}
+.co-5{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 41.66666667%
+}
+.co-6{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%
+}
+.co-7{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 58.333333333%
+}
+.co-8{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 66.66666667%
+}
+.co-9{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 75%
+}
+.co-10{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 83.33333333%
+}
+.co-11{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 91.66666667%
+}
+.co-12{
+    position: relative;float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%
+}
