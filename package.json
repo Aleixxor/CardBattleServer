@@ -1,0 +1,20 @@
+{
+  "name": "cardbattle-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node server.js",
+    "serve": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "Alex Abreu Louzada",
+  "license": "",
+  "devDependencies": {},
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1"
+  },
+  "description": ""
+}
