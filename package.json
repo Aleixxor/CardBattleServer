@@ -2,6 +2,9 @@
   "name": "cardbattle-server",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "10.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node server.js",
@@ -12,9 +15,12 @@
   "license": "",
   "devDependencies": {},
   "dependencies": {
+    "bufferutil": "4.0.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "socket.io": "^2.1.1"
+    "express": "4.16.4",
+    "socket.io": "^2.1.1",
+    "utf-8-validate": "5.0.1",
+    "ws": "6.1.2"
   },
   "description": ""
 }

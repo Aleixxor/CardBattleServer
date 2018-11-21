@@ -13,8 +13,24 @@
       href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLP9qH115r2PUuSXOer96KnJTewladGN8b8vLmMTJbzGAI8R-W"
       type="image/x-icon"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
   </head>
   <body>
     <h1>API Online</h1>
+
+    <p id="server-time"></p>
+    <script>
+      var socket = io();
+      var el = document.getElementById('server-time');
+      socket.on("receivedMessage", function(message) {
+        message = encryptDecrypt(message);
+        renderMessage("received", message);
+      });
+
+      socket.on('time', function(timeString) {
+        el.innerHTML = 'Server time: ' + timeString;
+      });
+    </script>
   </body>
 </html>

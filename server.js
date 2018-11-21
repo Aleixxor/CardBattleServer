@@ -1,22 +1,30 @@
+'use strict';
+
 const express = require('express');
+const socketIO = require('socket.io');
 const path = require('path');
-
-const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-
 const fs = require('fs');
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'public'));
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
+const app = express();
 
-app.use('/', (req, res) => {
+const INDEX = path.join(__dirname, 'public');
+const PORT = process.env.PORT || 3000;
+
+// const server = require('http').createServer(app);
+
+const server = app
+  .use(express.static(path.join(INDEX)))
+  .set('views', path.join(INDEX))
+  .engine('html', require('ejs').renderFile)
+  .set('view engine', 'html')
+  .use('/', (req, res) => {
     res.render('index.html');
-});
+    })
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-function createNewCardCollection(collectionID, typeOfTheCards, quantCards, collectionPossibleEffects) {
+  const io = socketIO(server);
+
+  function createNewCardCollection(collectionID, typeOfTheCards, quantCards, collectionPossibleEffects) {
     const vm = this;
     vm.possibleEffects = collectionPossibleEffects;
 
@@ -349,6 +357,4 @@ io.on('connection', socket => {
     });
 });
 
-console.log("CONEXÃO ABERTA EM: http://localhost:3000/");
-
-server.listen(3000);
+setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
