@@ -15,6 +15,9 @@
   "license": "",
   "devDependencies": {},
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.20",
+    "@uirouter/visualizer": "^6.0.2",
+    "angular": "^1.7.5",
     "ejs": "^2.6.1",
     "express": "4.16.4",
     "socket.io": "^2.1.1",
